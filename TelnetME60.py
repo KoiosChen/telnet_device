@@ -82,20 +82,3 @@ class TelnetDevice:
 
     def telnet_close(self):
         self.tn.close()
-
-if __name__ == '__main__':
-    t = TelnetDevice(host='172.30.2.4', username='monitor', password='Gwbnsh@408')
-    y = t.get_access_user_by_domain()
-    for yy in y:
-        print(yy)
-
-    '''
-    fsp, ont_id, result = t.find_by_mac(mac='0007-2680-3C83')
-    if fsp:
-        t.go_into_interface_mode(fsp)
-        p = fsp.split('/')[2]
-        for i in t.check_register_info(p, id=ont_id):
-            print(i)
-    else:
-        print('not find mac')
-    '''
